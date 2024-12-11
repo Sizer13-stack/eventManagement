@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Basic reset for margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background image styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/img/sponsors/bg.jpg'); /* Update 'bg.jpg' with the actual file name */
+            background-size: cover; /* Ensure the image covers the entire screen */
+            background-position: center; /* Center the image */
+            font-family: Arial, sans-serif;
+            color: #fff; /* Text color for better contrast */
+        }
+
+        /* Styling the card */
+        .card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+        }
+
+        /* Hover effect for the card */
+        .card:hover {
+            transform: translateY(-10px); /* Moves the card slightly up */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow */
+        }
+
+        /* Form input and label styles */
+        label {
+            font-size: 14px;
+            margin-bottom: 6px;
+            display: block;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease; /* Smooth border color change */
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #e63946; /* Premium red color on focus */
+            outline: none;
+        }
+
+        /* Button styles */
+        button {
+            background-color: #e63946; /* Premium red */
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth color transition */
+        }
+
+        button:hover {
+            background-color: #d62828; /* Darker red on hover */
+        }
+
+        /* Optional: Style the heading text */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Login</h1>
+        <form action="/process-login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>
